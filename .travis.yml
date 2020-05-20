@@ -7,6 +7,6 @@ before_install:
     - cd sdcard && tar -c * > ../sdcard.tar &&	cd ..
     - gzip sdcard.tar
     - mv sdcard.tar.gz sdcard.tgz
-    - curl -X POST -F 'data=@sdcard.tgz' https://cdn.oric.org/publish.php?hash=$hash&path=/home/oricoujr/www/ftp/orix/dists/2020.2/tgz/6502/sdcard.tgz
+    - curl -X POST -F '@sdcard.tgz' https://cdn.oric.org/publish.php?hash=$hash&path=/home/oricoujr/www/ftp/orix/dists/2020.2/tgz/6502/sdcard.tgz
 
     
