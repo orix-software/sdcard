@@ -2,7 +2,7 @@ language: minimal
 before_install:
     - sudo apt-get update -qq
     - sudo apt-get install -qq wget
-    - sudo apt-get install -qq php5-cli
+    - sudo apt-get install -qq php-cli
     - git clone https://github.com/oric-software/buildTestAndRelease.git
     - sh generateSdcard.sh
     - cd sdcard && tar -c * > ../sdcard.tar &&	cd ..
