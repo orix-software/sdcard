@@ -1,0 +1,13 @@
+language: minimal
+before_install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq wget
+    - git clone https://github.com/oric-software/buildTestAndRelease.git
+    - sh generateSdcard.sh
+    - cd sdcard && tar -c * > ../sdcard.tar &&	cd ..
+	- gzip sdcard.tar
+	- mv sdcard.tar.gz sdcard.tgz
+	- php buildTestAndRelease/publish/publish2repo.php sdcard.tgz ${hash} 6502 tgz 2020.2
+
+
+
