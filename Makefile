@@ -20,7 +20,6 @@ endif
 all : build
 .PHONY : all
 
-
 build:
-	mkdir build
+
 	sh  generateSdcard.sh
