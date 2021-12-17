@@ -22,4 +22,5 @@ all : build
 
 
 build:
+	mkdir build
 	sh  generateSdcard.sh
