@@ -3,7 +3,7 @@ name: build
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '30 5 * * *'
+    - cron:  '30 5 1 * *'
   # Triggers the workflow on push event only for all branches
   push:
     branches: [ main, master, develop ]
@@ -115,6 +115,7 @@ jobs:
 
       - name: Compile project
         run:  |
+          sudo apt-get update        
           sudo apt-get install curl -y
           sudo apt-get install libcurl4-gnutls-dev -y
           sudo apt-get install python3-pycurl -y
